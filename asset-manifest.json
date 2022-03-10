@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/avg-calci/static/css/main.31d6cfe0.css",
+    "main.js": "/avg-calci/static/js/main.cad9ede3.js",
+    "index.html": "/avg-calci/index.html",
+    "main.cad9ede3.js.map": "/avg-calci/static/js/main.cad9ede3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.cad9ede3.js"
+  ]
+}
