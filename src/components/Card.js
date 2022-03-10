@@ -1,8 +1,8 @@
-import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Divider, Spacer } from "@chakra-ui/react";
 import { ArrowDownIcon, ArrowUpIcon } from "@chakra-ui/icons";
 const Card = ({ data }) => {
   return (
-    <Box bg="gray.200" w="100%" p={4} color="black" textAlign={"center"}>
+    <Box bg="red.300" w="100%" p={4} color="black" textAlign={"center"}>
       <Flex justifyContent="center">
         <Heading>New Average Buy Price :</Heading>
         <Heading>
@@ -29,6 +29,12 @@ const Card = ({ data }) => {
           </Heading>
         </Flex>
       )}
+      <br />
+      <Divider />
+      <br />
+      <Box color="">
+        <Text>Made with 😥 by Dinesh Pandikona</Text>
+      </Box>
     </Box>
   );
 };
