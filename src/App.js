@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import DetailForm from "./components/DetailForm";
+import Card from "./components/Card";
 
 function App() {
+  const [toggle, setToggle] = useState(false);
+  const [allValues, setAllValues] = useState({
+    initialAvgBuyPrice: 0, //2.456883
+    initialQuantity: 0, //264.5628
+    initialInvestedAmount: 0, //650
+    ltpOfAsset: 0, //1.285257
+    toInvestAmount: 0, //5000
+  });
+  // to calculate values;
+  const [calDetails, setCalDetails] = useState({
+    currentInvestQuantity: 0,
+    newAvgBuyPrice: 0,
+    percentProfitOrLoss: 0,
+  });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DetailForm
+        allValues={allValues}
+        setAllValues={setAllValues}
+        calDetails={calDetails}
+        setCalDetails={setCalDetails}
+        setToggle={setToggle}
+      />
+      {toggle ? <Card data={calDetails} /> : null}
     </div>
   );
 }
